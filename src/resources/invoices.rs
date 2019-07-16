@@ -157,6 +157,7 @@ pub struct Invoice {
     pub receipt_number: Option<String>,
     pub starting_balance: i64,
     pub statment_descriptor: Option<String>,
+    pub status: String,
     pub subscription: Option<String>,
     pub subscription_proration_date: Option<Timestamp>,
     pub subtotal: i64,
