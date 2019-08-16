@@ -150,6 +150,7 @@ pub struct Invoice {
     pub lines: List<InvoiceLineItem>,
     pub livemode: bool,
     pub metadata: Metadata,
+    pub number: Option<String>,
     pub next_payment_attempt: Option<Timestamp>,
     pub paid: bool,
     pub period_end: Timestamp,
