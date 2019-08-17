@@ -135,6 +135,8 @@ impl Identifiable for InvoiceLineItem {
 pub struct Invoice {
     pub id: Option<String>, // id field is not present when retrieving upcoming invoices
     pub amount_due: u64,
+    pub amount_paid: u64,
+    pub amount_remaining: u64,
     pub application_fee: Option<u64>,
     pub attempt_count: u64,
     pub attempted: bool,
