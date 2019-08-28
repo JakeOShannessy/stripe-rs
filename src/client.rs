@@ -176,6 +176,7 @@ mod tests {
             coupon: None,
             description: None,
             shipping: None,
+            ..Default::default()
         };
         let url = Client::url("/");
         let http = reqwest::Client::new();

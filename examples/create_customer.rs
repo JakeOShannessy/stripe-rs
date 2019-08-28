@@ -22,6 +22,7 @@ fn main() {
             description: None,
             metadata: None,
             shipping: None,
+            ..Default::default()
         },
     )
     .unwrap();

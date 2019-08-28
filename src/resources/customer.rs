@@ -40,7 +40,11 @@ pub struct CustomerParams<'a> {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub email: Option<&'a str>,
     #[serde(skip_serializing_if = "Option::is_none")]
+    pub invoice_prefix: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub metadata: Option<Metadata>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub name: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub shipping: Option<CustomerShippingDetails>,
     #[serde(skip_serializing_if = "Option::is_none")]
