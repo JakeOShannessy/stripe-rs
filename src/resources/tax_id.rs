@@ -35,7 +35,7 @@ pub struct TaxId {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub livemode: Option<bool>,
 
-    /// Type of the tax ID, one of `au_abn`, `br_cnpj`, `br_cpf`, `ca_bn`, `ca_qst`, `ch_vat`, `es_cif`, `eu_vat`, `hk_br`, `in_gst`, `jp_cn`, `kr_brn`, `li_uid`, `mx_rfc`, `my_itn`, `my_sst`, `no_vat`, `nz_gst`, `ru_inn`, `sg_gst`, `sg_uen`, `th_vat`, `tw_vat`, `us_ein`, or `za_vat`.
+    /// Type of the tax ID, one of `au_abn`, `br_cnpj`, `br_cpf`, `ca_bn`, `ca_qst`, `ch_vat`, `es_cif`, `eu_vat`, `gb_vat`, ``hk_br`, `in_gst`, `jp_cn`, `kr_brn`, `li_uid`, `mx_rfc`, `my_itn`, `my_sst`, `no_vat`, `nz_gst`, `ru_inn`, `sg_gst`, `sg_uen`, `th_vat`, `tw_vat`, `us_ein`, or `za_vat`.
     ///
     /// Note that some legacy tax IDs have type `unknown`.
     #[serde(rename = "type")]
@@ -86,6 +86,7 @@ pub enum TaxIdType {
     ChVat,
     EsCif,
     EuVat,
+    GbVat,
     HkBr,
     InGst,
     JpCn,
@@ -117,6 +118,7 @@ impl TaxIdType {
             TaxIdType::ChVat => "ch_vat",
             TaxIdType::EsCif => "es_cif",
             TaxIdType::EuVat => "eu_vat",
+            TaxIdType::GbVat => "gb_vat",
             TaxIdType::HkBr => "hk_br",
             TaxIdType::InGst => "in_gst",
             TaxIdType::JpCn => "jp_cn",

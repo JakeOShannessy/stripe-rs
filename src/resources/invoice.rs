@@ -420,7 +420,7 @@ pub struct InvoiceItemThresholdReason {
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct InvoicesResourceInvoiceTaxId {
-    /// The type of the tax ID, one of `eu_vat`, `br_cnpj`, `br_cpf`, `nz_gst`, `au_abn`, `in_gst`, `no_vat`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ca_bn`, `hk_br`, `es_cif`, `tw_vat`, `th_vat`, `jp_cn`, `li_uid`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `my_sst`, `sg_gst`, or `unknown`.
+    /// The type of the tax ID, one of `eu_vat`, `gb_vat`, `br_cnpj`, `br_cpf`, `nz_gst`, `au_abn`, `in_gst`, `no_vat`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ca_bn`, `hk_br`, `es_cif`, `tw_vat`, `th_vat`, `jp_cn`, `li_uid`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `my_sst`, `sg_gst`, or `unknown`.
     #[serde(rename = "type")]
     pub type_: TaxIdType,
 
@@ -836,6 +836,7 @@ pub enum TaxIdType {
     ChVat,
     EsCif,
     EuVat,
+    GbVat,
     HkBr,
     InGst,
     JpCn,
@@ -867,6 +868,7 @@ impl TaxIdType {
             TaxIdType::ChVat => "ch_vat",
             TaxIdType::EsCif => "es_cif",
             TaxIdType::EuVat => "eu_vat",
+            TaxIdType::GbVat => "gb_vat",
             TaxIdType::HkBr => "hk_br",
             TaxIdType::InGst => "in_gst",
             TaxIdType::JpCn => "jp_cn",
