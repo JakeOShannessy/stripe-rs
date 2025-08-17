@@ -552,6 +552,8 @@ pub struct CreateInvoice<'a> {
     /// This field has been deprecated and will be removed in a future API version, for further information view the [migration docs](https://stripe.com/docs/billing/migration/taxes) for `tax_rates`.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub tax_percent: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub currency: Option<Currency>,
 }
 
 impl<'a> CreateInvoice<'a> {
@@ -574,6 +576,7 @@ impl<'a> CreateInvoice<'a> {
             statement_descriptor: Default::default(),
             subscription: Default::default(),
             tax_percent: Default::default(),
+            currency: Default::default(),
         }
     }
 }
